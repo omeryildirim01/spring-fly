@@ -1,25 +1,16 @@
 package com.yildirimomer.springfly;
 
-import com.sun.xml.internal.ws.api.BindingIDFactory;
 import com.yildirimomer.springfly.domain.dto.*;
-import com.yildirimomer.springfly.domain.model.AirlineCompany;
-import com.yildirimomer.springfly.domain.model.AirlineRoute;
 import com.yildirimomer.springfly.domain.model.CreditCardType;
-import com.yildirimomer.springfly.domain.model.Flight;
 import com.yildirimomer.springfly.service.*;
 import com.yildirimomer.springfly.tools.CardUtil;
 import com.yildirimomer.springfly.tools.PriceCalculateUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 
-import javax.smartcardio.Card;
-import java.io.Console;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.*;
 
 /**
