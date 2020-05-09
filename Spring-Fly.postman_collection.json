@@ -1,0 +1,1283 @@
+{
+	"info": {
+		"_postman_id": "83952402-b216-401e-b456-2923648ade34",
+		"name": "Spring-Fly",
+		"description": "demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AirlineCompany",
+			"item": [
+				{
+					"name": "airlinecompany-save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 0,\r\n\"name\": \"Anadolu Express\",\r\n\"address\": \"Istanbul\",\r\n\"telephone\": \"+9002169999999\",\r\n\"mail\": \"mail@anadoluexpress.com\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/airlinecompany",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlinecompany"
+							]
+						},
+						"description": "POST Method, to save new item"
+					},
+					"response": []
+				},
+				{
+					"name": "airlinecompany-get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlinecompany",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlinecompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "airlinecompany-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlinecompany/find?id=4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlinecompany",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "airlinecompany-get-page-with-params-pageNo=1&pageSize=10&sortBy=id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlinecompany/page?pageNo=1&pageSize=10&sortBy=id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlinecompany",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								}
+							]
+						},
+						"description": "to get page items by using page parameters."
+					},
+					"response": []
+				},
+				{
+					"name": "airlinecompany-search-by-name-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlinecompany/search?name=a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlinecompany",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "a"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "customer-save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 0,\r\n\"name\": \"Demo User99\",\r\n\"telephone\": \"99999999999\",\r\n\"mail\": \"mail@mail.com\",\r\n\"address\": \"Istanbul\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						},
+						"description": "POST Method, to save new item"
+					},
+					"response": []
+				},
+				{
+					"name": "customer-get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/customer/find?id=9",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer-get-page-with-params-pageNo=1&pageSize=10&sortBy=id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/customer/page?pageNo=1&pageSize=10&sortBy=id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								}
+							]
+						},
+						"description": "to get page items by using page parameters."
+					},
+					"response": []
+				},
+				{
+					"name": "customer-search-by-name-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/customer/search?name=Dem",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customer",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Dem"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "AirlineRoute",
+			"item": [
+				{
+					"name": "airline-route-save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 0,\r\n\"name\": \"SampleFlight\",\r\n\"code\": \"smp123\",\r\n\"flightTime\": 1000,\r\n\"flightDistance\": 900,\r\n\"arrivalAirport\": {\r\n\"id\": 2,\r\n\"name\": \"Istanbul\",\r\n\"code\": \"SAW\",\r\n\"country\": \"tr\",\r\n\"city\": \"Sabiha Gokcen\"\r\n},\r\n\"departureAirport\": {\r\n\"id\": 1,\r\n\"name\": \"Istanbul\",\r\n\"code\": \"IST\",\r\n\"country\": \"tr\",\r\n\"city\": \"Istanbul\"\r\n}\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/airlineroute",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlineroute"
+							]
+						},
+						"description": "POST Method, to save new item"
+					},
+					"response": []
+				},
+				{
+					"name": "airline-route-get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlineroute",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlineroute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "airline-route-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlineroute/find?id=6",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlineroute",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "airline-route-get-page-with-params-pageNo=1&pageSize=10&sortBy=id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlineroute/page?pageNo=1&pageSize=10&sortBy=id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlineroute",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								}
+							]
+						},
+						"description": "to get page items by using page parameters."
+					},
+					"response": []
+				},
+				{
+					"name": "airlinecompany-search-by-name-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlinecompany/search?name=a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlinecompany",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "a"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				},
+				{
+					"name": "airlinecompany-search-by-code-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airlinecompany/search?code=a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airlinecompany",
+								"search"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "a"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Flight",
+			"item": [
+				{
+					"name": "flight-save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 0,\r\n\"name\": \"Flight444\",\r\n\"code\": \"flight444\",\r\n\"quota\": 50,\r\n\"departureDate\": \"2021-01-01T10:15:55.000+0000\",\r\n\"arrivalDate\": \"2021-01-01T11:15:55.000+0000\",\r\n\"airlineCompany\": {\r\n\"id\": 4,\r\n\"name\": \"Pegasus\",\r\n\"address\": \"Istanbul\",\r\n\"telephone\": \"+9002169999999\",\r\n\"mail\": \"mail@pegasus.com\"\r\n},\r\n\"airlineRoute\": {\r\n\"id\": 6,\r\n\"name\": \"Flight1\",\r\n\"code\": \"demo\",\r\n\"flightTime\": 60000,\r\n\"flightDistance\": 2500,\r\n\"departureAirport\": {\r\n\"id\": 2,\r\n\"name\": \"Istanbul\",\r\n\"code\": \"SAW\",\r\n\"country\": \"tr\",\r\n\"city\": \"Sabiha Gokcen\"\r\n},\r\n\"arrivalAirport\": {\r\n\"id\": 1,\r\n\"name\": \"Istanbul\",\r\n\"code\": \"IST\",\r\n\"country\": \"tr\",\r\n\"city\": \"Istanbul\"\r\n}\r\n}\r\n}\r\n"
+						},
+						"url": {
+							"raw": "localhost:8080/flight",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flight"
+							]
+						},
+						"description": "POST Method, to save new item"
+					},
+					"response": []
+				},
+				{
+					"name": "flight-get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/flight",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/flight/find?id=8",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flight",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "flight-get-page-with-params-pageNo=1&pageSize=10&sortBy=id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/flight/page?pageNo=1&pageSize=10&sortBy=id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flight",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								}
+							]
+						},
+						"description": "to get page items by using page parameters."
+					},
+					"response": []
+				},
+				{
+					"name": "flight-search-by-name-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/flight/search?name=F",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flight",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "F"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				},
+				{
+					"name": "flight-search-by-code-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/flight/search?code=f",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"flight",
+								"search"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "f"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "ticket-save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n\"id\": 0,\r\n\"ticketNumber\": \"ea1f821f-69a8-4c56-bca7-d9e68b4c80ff\",\r\n\"gate\": \"D22\",\r\n\"checkinDate\": \"2020-05-09T20:22:12.763+0000\",\r\n\"booking\": {\r\n\"id\": 12,\r\n\"bookingDate\": \"2020-05-09T20:22:12.728+0000\",\r\n\"creditCardNumber\": \"1234567812341234\",\r\n\"creditCardType\": \"VISA\",\r\n\"creditCardName\": \"bank\",\r\n\"creditCardExpiryMonth\": 2,\r\n\"creditCardExpiryYear\": 2021,\r\n\"customer\": {\r\n\"id\": 9,\r\n\"name\": \"Demo User1\",\r\n\"telephone\": \"555555555555\",\r\n\"mail\": \"mail@mail.com\",\r\n\"address\": \"Istanbul\"\r\n},\r\n\"flight\": {\r\n\"id\": 8,\r\n\"name\": \"Flight123\",\r\n\"code\": \"flight123\",\r\n\"quota\": 100,\r\n\"price\": 50,\r\n\"departureDate\": \"2021-01-01T10:15:55.000+0000\",\r\n\"arrivalDate\": \"2021-01-01T00:15:55.000+0000\",\r\n\"airlineCompany\": {\r\n\"id\": 4,\r\n\"name\": \"Pegasus\",\r\n\"address\": \"Istanbul\",\r\n\"telephone\": \"+9002169999999\",\r\n\"mail\": \"mail@pegasus.com\"\r\n},\r\n\"airlineRoute\": {\r\n\"id\": 6,\r\n\"name\": \"Flight1\",\r\n\"code\": \"demo\",\r\n\"flightTime\": 60000,\r\n\"flightDistance\": 2500,\r\n\"departureAirport\": {\r\n\"id\": 2,\r\n\"name\": \"Sabiha Gokcen\",\r\n\"code\": \"SAW\",\r\n\"country\": \"tr\",\r\n\"city\": \"Istanbul\"\r\n},\r\n\"arrivalAirport\": {\r\n\"id\": 1,\r\n\"name\": \"Istanbul\",\r\n\"code\": \"IST\",\r\n\"country\": \"tr\",\r\n\"city\": \"Istanbul\"\r\n}\r\n}\r\n},\r\n\"ticket\": null,\r\n\"ticketPrice\": 100\r\n}\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/ticket",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ticket"
+							]
+						},
+						"description": "POST Method, to save new item"
+					},
+					"response": []
+				},
+				{
+					"name": "ticket-get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/ticket",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticket-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/ticket/find?id=13",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ticket",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ticket-get-page-with-params-pageNo=1&pageSize=10&sortBy=id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/ticket/page?pageNo=1&pageSize=10&sortBy=id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ticket",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								}
+							]
+						},
+						"description": "to get page items by using page parameters."
+					},
+					"response": []
+				},
+				{
+					"name": "ticket-search-by-ticket-number-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/ticket/search?ticketnumber=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ticket",
+								"search"
+							],
+							"query": [
+								{
+									"key": "ticketnumber",
+									"value": "2"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				},
+				{
+					"name": "ticket-checkin-by-booking-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/ticket/checkin?bookingId=12",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ticket",
+								"checkin"
+							],
+							"query": [
+								{
+									"key": "bookingId",
+									"value": "12"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "book-flight",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/booking/bookflight?customerId=9&flightId=8&creditCardNumber=1234567812345678&creditCardName=bank&cardExpiryYear=2022&cardExpiryMonth=02&cardType=VISA",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking",
+								"bookflight"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "9"
+								},
+								{
+									"key": "flightId",
+									"value": "8"
+								},
+								{
+									"key": "creditCardNumber",
+									"value": "1234567812345678"
+								},
+								{
+									"key": "creditCardName",
+									"value": "bank"
+								},
+								{
+									"key": "cardExpiryYear",
+									"value": "2022"
+								},
+								{
+									"key": "cardExpiryMonth",
+									"value": "02"
+								},
+								{
+									"key": "cardType",
+									"value": "VISA"
+								}
+							]
+						},
+						"description": "POST Method, to save new item"
+					},
+					"response": []
+				},
+				{
+					"name": "booking-get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/booking",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking-find-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/booking/find?id=12",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking-cancel-by-id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/booking/cancel?id=12",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking",
+								"cancel"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "booking-get-page-with-params-pageNo=1&pageSize=10&sortBy=id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/booking/page?pageNo=1&pageSize=10&sortBy=id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"booking",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								}
+							]
+						},
+						"description": "to get page items by using page parameters."
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Airport",
+			"item": [
+				{
+					"name": "airport-get",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/airport",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airport"
+							]
+						},
+						"description": "To save airport object, post json raw data"
+					},
+					"response": []
+				},
+				{
+					"name": "airport-find-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/airport/find?id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airport",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						},
+						"description": "To save airport object, post json raw data"
+					},
+					"response": []
+				},
+				{
+					"name": "airport-get-page-with-params-pageNo=1&pageSize=10&sortBy=id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airport/page?pageNo=1&pageSize=10&sortBy=id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airport",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "id"
+								}
+							]
+						},
+						"description": "to get page items by using page parameters."
+					},
+					"response": []
+				},
+				{
+					"name": "airport-save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 0,\r\n\"name\": \"Berlin\",\r\n\"code\": \"TXB\",\r\n\"country\": \"de\",\r\n\"city\": \"Berlin\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:8080/airport",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airport"
+							]
+						},
+						"description": "POST Method, to save new item"
+					},
+					"response": []
+				},
+				{
+					"name": "airport-search-by-name-Optional",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/airport/search?name=a",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"airport",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "a"
+								}
+							]
+						},
+						"description": "searching method, to find by name , name is optional"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

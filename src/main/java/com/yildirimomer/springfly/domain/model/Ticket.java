@@ -35,14 +35,10 @@ public class Ticket extends BaseEntity implements Serializable {
     @ApiModelProperty(name = "gate",value = "gate",dataType = "String")
     private String gate;
 
-    @ApiModelProperty(name = "ticketPrice",value = "ticketPrice",dataType = "Double")
-    private double ticketPrice;
-
     @Basic
     @Temporal(TemporalType.TIMESTAMP)
     @ApiModelProperty(name = "checkinDate",value = "checkinDate",dataType = "Date")
     private java.util.Date checkinDate;
-
 
     @ApiModelProperty(name = "booking",value = "booking",dataType = "Booking")
     @OneToOne(targetEntity =Booking.class ,cascade = CascadeType.ALL)
