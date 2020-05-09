@@ -234,7 +234,8 @@ public class DbInitializer implements CommandLineRunner {
         int cardExpiryMonth = 2;
         int cardExpiryYear = 2021;
         String creditCardName= "bank";
-        String creditCardNumber ="1234567812341234";
+        String creditCardNumber ="5434-5678-1234-1234";
+        String formattedCreditCardNumber = CardUtil.maskCardNumber(CardUtil.mask,creditCardNumber);
         CreditCardType cardType =  CreditCardType.VISA;
         List<CustomerDto> customerDtoList =customerService.getAll();
         CustomerDto customerDto = customerDtoList.get(0);
@@ -246,7 +247,7 @@ public class DbInitializer implements CommandLineRunner {
             bookingDto.setCreditCardExpiryMonth(cardExpiryMonth);
             bookingDto.setCreditCardExpiryYear(cardExpiryYear);
             bookingDto.setCreditCardName(creditCardName);
-            bookingDto.setCreditCardNumber(creditCardNumber);
+            bookingDto.setCreditCardNumber(formattedCreditCardNumber);
             bookingDto.setCustomer(customerDto);
             bookingDto.setFlight(flightDto);
             bookingDto.setBookingDate(new Date());
