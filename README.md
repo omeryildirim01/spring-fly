@@ -1,5 +1,5 @@
 # spring-fly
-This study demostrates that how to build a demo flight booking service, based on spring boot application.
+This study demonstrates that how to build a demo flight booking service, based on spring boot application.
 ● JAVA 8 
 ● Maven
 ● Spring Boot
